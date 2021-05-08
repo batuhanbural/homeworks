@@ -38,7 +38,7 @@ $(document).ready(function () {
     })
 
     h2s.each(function (index, element) {
-        $(this).replaceWith("<h2>" + $(this).text() + " (" + p_len_arr[index] + " karakter)</h2>")
+        $(this).append(" (" + p_len_arr[index] + " karakter)")
 
     })
 })
@@ -46,14 +46,38 @@ $(document).ready(function () {
 
 // görev 5
 $(document).ready(function () {
+    let all_h2 = $("article > div > h2")
+    let h1 = $("h1")
+
+    h1.css("color", "crimson")
+
+    all_h2.each(function (index, element) {
+        if (index % 2 === 0) {
+            $(this).css("color", "royalblue")
+        } else {
+            $(this).css("color", "darkorange")
+        }
+    })
 })
 
 // görev 6
 
+
 // görev 7
+$(document).ready(function () {
+    let all_h2 = $("article > div > h2:contains(can)")
+    let gorev7_ul = $("#gorev7 > ul");
+
+    all_h2.each(function () {
+        gorev7_ul.append("<li>" + $(this).text() + "</li>")
+    })
+})
 
 // görev 8
 
 // görev 9
+$(document).ready(function (index, element) {
+    
+})
 
 // görev 10
