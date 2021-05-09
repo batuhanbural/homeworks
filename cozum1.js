@@ -61,7 +61,14 @@ $(document).ready(function () {
 })
 
 // görev 6
+$(document).ready(function (index, element) {
+    let first_article = $("article > div").first()
 
+    first_article.mouseover(function () {
+        $(this).fadeOut(200);
+    })
+
+})
 
 // görev 7
 $(document).ready(function () {
@@ -74,10 +81,21 @@ $(document).ready(function () {
 })
 
 // görev 8
+$(document).ready(function (index, element) {
+    let gorev9_input = $("#gorev9 > input");
+    let all_h2 = $("h2")
+
+    all_h2.each(function () {
+        $(this).mouseover(function () {
+            gorev9_input.val($(this).text())
+        })
+
+    })
+})
 
 // görev 9
 $(document).ready(function (index, element) {
-    
+
 })
 
 // görev 10
