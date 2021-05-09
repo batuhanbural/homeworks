@@ -113,3 +113,5 @@ $(document).ready(function (index, element) {
 $("#gorev10 > button").click(function (index, element) {
     $("body").prepend("<img style='position: fixed; bottom: 8px; right: 16px' width='100' src='check.png' alt='check'/>")
 })
+
+// At 4. mission it calculates wrong.
