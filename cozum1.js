@@ -33,12 +33,16 @@ $(document).ready(function () {
 
     const p_len_arr = [];
     ps.each(function (index, element) {
-        const metin = $(this).text();
-        p_len_arr.push(metin.length)
+        let p_len = 0
+        let metin = $(this).text().replaceAll("\s", "");
+        for (let line = 0; line < (metin.split("\n")).length; line++) {
+            p_len += metin.split("\n")[line].trimStart().length + 2
+        }
+        p_len_arr.push(p_len)
     })
 
     h2s.each(function (index, element) {
-        $(this).append(" (" + p_len_arr[index] + " karakter)")
+        $(this).append(" (" + (p_len_arr[index]) + " karakter)")
 
     })
 })
@@ -82,6 +86,19 @@ $(document).ready(function () {
 
 // görev 8
 $(document).ready(function (index, element) {
+    $("article > h1").after("<div><h2>Lorem</h2><p id='new_lorem'></p></div>")
+
+    $.ajax({
+        url: "lorem.html",
+        type: "get",
+        success: function (data) {
+            $("#new_lorem").prepend(data)
+        }
+    })
+})
+
+// görev 9
+$(document).ready(function (index, element) {
     let gorev9_input = $("#gorev9 > input");
     let all_h2 = $("h2")
 
@@ -89,13 +106,10 @@ $(document).ready(function (index, element) {
         $(this).mouseover(function () {
             gorev9_input.val($(this).text())
         })
-
     })
 })
 
-// görev 9
-$(document).ready(function (index, element) {
-
-})
-
 // görev 10
+$(document).ready(function (index, element) {
+    $("body").prepend("<img style='position: fixed; bottom: 8px; right: 16px' width='100' src='check.png' alt='check'/>")
+})
