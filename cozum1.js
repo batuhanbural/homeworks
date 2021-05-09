@@ -1,5 +1,5 @@
 // görev 1
-$(document).ready(function () {
+$("#gorev1 > button").click(function () {
     let gorev1_ul = $("#gorev1 > ul");
     let top3_h2 = $("h2:lt(3)")
 
@@ -11,7 +11,7 @@ $(document).ready(function () {
 
 
 // görev 2
-$(document).ready(function () {
+$("#gorev2 > button").click(function () {
     let gorev2_input = $("#gorev2 :input");
     let all_h2 = $("h2").length;
     gorev2_input.val(all_h2);
@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 
 // görev 3
-$(document).ready(function () {
+$("#gorev3 > button").click(function () {
     let gorev3_input = $("#gorev3 :input");
     let h1 = $("h1").text();
     gorev3_input.val(h1);
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
 
 // görev 4
-$(document).ready(function () {
+$("#gorev4 > button").click(function () {
     let ps = $("article > div > p");
     let h2s = $("article > div > h2");
 
@@ -49,7 +49,7 @@ $(document).ready(function () {
 
 
 // görev 5
-$(document).ready(function () {
+$("#gorev5 > button").click(function () {
     let all_h2 = $("article > div > h2")
     let h1 = $("h1")
 
@@ -65,7 +65,7 @@ $(document).ready(function () {
 })
 
 // görev 6
-$(document).ready(function (index, element) {
+$("#gorev6 > button").click(function (index, element) {
     let first_article = $("article > div").first()
 
     first_article.mouseover(function () {
@@ -75,7 +75,7 @@ $(document).ready(function (index, element) {
 })
 
 // görev 7
-$(document).ready(function () {
+$("#gorev7 > button").click(function () {
     let all_h2 = $("article > div > h2:contains(can)")
     let gorev7_ul = $("#gorev7 > ul");
 
@@ -85,7 +85,7 @@ $(document).ready(function () {
 })
 
 // görev 8
-$(document).ready(function (index, element) {
+$("#gorev8 > button").click(function (index, element) {
     $("article > h1").after("<div><h2>Lorem</h2><p id='new_lorem'></p></div>")
 
     $.ajax({
@@ -105,11 +105,10 @@ $(document).ready(function (index, element) {
     all_h2.each(function () {
         $(this).mouseover(function () {
             gorev9_input.val($(this).text())
-        })
     })
 })
 
 // görev 10
-$(document).ready(function (index, element) {
+$("#gorev10 > button").click(function (index, element) {
     $("body").prepend("<img style='position: fixed; bottom: 8px; right: 16px' width='100' src='check.png' alt='check'/>")
 })
