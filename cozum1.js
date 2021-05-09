@@ -105,6 +105,7 @@ $(document).ready(function (index, element) {
     all_h2.each(function () {
         $(this).mouseover(function () {
             gorev9_input.val($(this).text())
+        })
     })
 })
 
